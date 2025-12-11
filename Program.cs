@@ -4,10 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Budgetmangerrr mybudgetmanger = new Budgetmangerrr();
+            Budgetmangerrr mybudgetmanger = new Budgetmangerrr(); //skapa objekt från klassen 
             bool altenativ = true;
             while (altenativ)
             {
+                Console.Clear(); // rensar konsolen varje gång menyn visas
+                // meny som anvädaren kan välja
                 Console.WriteLine("Välkommen till meny");
                 Console.WriteLine("Välj ett altenativ nedan");
                 Console.WriteLine("------------------------");
@@ -29,8 +31,7 @@
                         mybudgetmanger.CalculateBalance();
                         break;
                     case "4":
-                        mybudgetmanger.DeleteTransaction();
-                                     //DeleteTransaction
+                        mybudgetmanger.DeleteTransaction();  
                         break;
                     case "5":
                          altenativ = false;
@@ -39,7 +40,11 @@
                      Console.WriteLine("Fel val, va vänlig och försök igen");
                      break;
                 }
-                 
+                if (altenativ)
+                {
+                    Console.WriteLine("Tryck på valfri tangent för att återgå till menyn...");
+                    Console.ReadKey();
+                }
             }
             
         }

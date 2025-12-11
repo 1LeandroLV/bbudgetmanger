@@ -33,6 +33,8 @@ namespace budgetmanger
             Transactions.Add(T); // sparar objktet i listan 
     
             Console.WriteLine("Transaktionen är sparad"); // Bekräftar för användaren att allt är sparad
+            Console.WriteLine("Tryck på valfri tangent för att återgå till menyn..."); 
+            Console.ReadKey(); 
         }
         public void ShowAll() 
         {
@@ -74,16 +76,21 @@ namespace budgetmanger
             }
             //Be användaren ange vilket nummer som ska tas bort
             Console.WriteLine("Ange numret på transaktionen du vill ta bort:");
-            int index = Convert.ToInt32(Console.ReadLine()) - 1; 
+            int index = Convert.ToInt32(Console.ReadLine()) - 1;
             //Kontrollera att index är giltigt
             if (index < 0 || index >= Transactions.Count)
             {
                 Console.WriteLine("Ogiltigt nummer!");
                 return;
             }
-            //Ta bort transaktionen
-            Transactions.RemoveAt(index);
-            Console.WriteLine("Transaktionen är borttagen");
+            else
+            {
+                //Ta bort transaktionen
+                Transactions.RemoveAt(index);
+                Console.WriteLine("Transaktionen är borttagen");
+            }
+            Console.WriteLine("Tryck på valfri tangent för att återgå till menyn...");
+            Console.ReadKey(); 
         }
 
     

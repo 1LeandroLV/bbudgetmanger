@@ -8,7 +8,7 @@ namespace budgetmanger
 {
     internal class Transaction
     {
-        //egen skaperna
+        //// Egenskaper för en transaktion
         public string Description {  get; set; } //Beskrivning 
         public decimal Amount { get; set; } //belopp
         public string  Category { get; set; } //kategori
