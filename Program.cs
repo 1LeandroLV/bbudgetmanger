@@ -8,7 +8,15 @@
             bool altenativ = true;
             while (altenativ)
             {
-              string menyval = Console.ReadLine();
+                Console.WriteLine("Välkommen till meny");
+                Console.WriteLine("Välj ett altenativ nedan");
+                Console.WriteLine("------------------------");
+                Console.WriteLine("1: Lägg till transaktioner");
+                Console.WriteLine("2: Visa alla transaktioner");
+                Console.WriteLine("3: visa totala balans");
+                Console.WriteLine("4: ta bort transaktion");
+                Console.WriteLine("5: Avsluta program");
+                string menyval = Console.ReadLine();
                 switch (menyval)
                 {
                     case "1":
@@ -21,7 +29,8 @@
                         mybudgetmanger.CalculateBalance();
                         break;
                     case "4":
-                        mybudgetmanger.DeleteTrasaction();
+                        mybudgetmanger.DeleteTransaction();
+                                     //DeleteTransaction
                         break;
                     case "5":
                          altenativ = false;
@@ -30,8 +39,10 @@
                      Console.WriteLine("Fel val, va vänlig och försök igen");
                      break;
                 }
+                 
             }
             
         }
     }
 }
+  

@@ -57,7 +57,8 @@ namespace budgetmanger
             // Skriv ut balansen efter loopen
             Console.WriteLine($"Din totala balans är {balance}");
         }
-        public void DeleteTrasaction()
+        public void DeleteTransaction()
+                   
         {
             // Kolla om listan är tom
             if (Transactions.Count == 0)
