@@ -31,14 +31,7 @@
                      break;
                 }
             }
-            Console.WriteLine("Välkommen till Personal budget meny");
-            Console.WriteLine("Välj ett Alnativ nedan!");
-            Console.WriteLine("------------------------");
-            Console.WriteLine("1: Lägg till transaktion");
-            Console.WriteLine("2: Visa alla transaktioner");
-            Console.WriteLine("3: Visa total balans");
-            Console.WriteLine("4: Ta bort Transaktion");
-            Console.WriteLine("5: Avsluta programmet");
+            
         }
     }
 }

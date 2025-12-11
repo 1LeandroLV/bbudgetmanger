@@ -22,7 +22,7 @@ namespace budgetmanger
             Console.WriteLine($"Kategori {Category}");
             Console.WriteLine($"Datum {Date}");
             Console.WriteLine("---------------------------");
-           
+            
         }
     }
 }
