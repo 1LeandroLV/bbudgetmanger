@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace budgetmanger
 {
@@ -57,9 +58,33 @@ namespace budgetmanger
             Console.WriteLine($"Din totala balans är {balance}");
         }
         public void DeleteTrasaction()
-        { 
-        
+        {
+            // Kolla om listan är tom
+            if (Transactions.Count == 0)
+            {
+                Console.WriteLine("Inga transaktioner finns ännu!");
+                return; // Avslutar metoden om listan är tom
+            }
+
+            //Visa alla transaktioner med nummer
+            for (int i = 0; i < Transactions.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}: {Transactions[i].Description} - {Transactions[i].Amount} kr - {Transactions[i].Category} - {Transactions[i].Date}");
+            }
+            //Be användaren ange vilket nummer som ska tas bort
+            Console.WriteLine("Ange numret på transaktionen du vill ta bort:");
+            int index = Convert.ToInt32(Console.ReadLine()) - 1; 
+            //Kontrollera att index är giltigt
+            if (index < 0 || index >= Transactions.Count)
+            {
+                Console.WriteLine("Ogiltigt nummer!");
+                return;
+            }
+            //Ta bort transaktionen
+            Transactions.RemoveAt(index);
+            Console.WriteLine("Transaktionen är borttagen");
         }
-                   
+
+    
     }
 }
