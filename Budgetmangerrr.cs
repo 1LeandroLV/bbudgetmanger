@@ -22,6 +22,7 @@ namespace budgetmanger
             string category = Console.ReadLine();
             Console.WriteLine("Ange datum");
             string date = Console.ReadLine();
+
             //Skapa ett nytt Transaction objekt med namnet T och fyller objektet med information
             Transaction T = new Transaction();
             T.Description = description;
@@ -33,8 +34,16 @@ namespace budgetmanger
             Console.WriteLine("Transaktionen är sparad"); // Bekräftar för användaren att allt är sparad
         }
         public void ShowAll() 
-        {  
-        
+        {
+          if (Transactions.Count == 0)  // kolla Om listan är tom 
+           {
+             Console.WriteLine("Inga transaktioner finns ännu!"); // kommer detta att skrivas ut
+             return;
+           }
+          foreach (Transaction transaction in Transactions) // loopa igenom alla transaktioner
+           {
+            transaction.ShowInfo(); // visa information om varje transaktion
+           }
         }
         public void CalculateBalance() 
         { 
