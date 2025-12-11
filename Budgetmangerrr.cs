@@ -45,8 +45,16 @@ namespace budgetmanger
             transaction.ShowInfo(); // visa information om varje transaktion
            }
         }
-        public void CalculateBalance() 
-        { 
+        public void CalculateBalance()  
+        {
+            decimal balance = 0;
+            // Loopa igenom alla transaktioner och addera beloppet
+            foreach (Transaction transaction in Transactions) 
+            {
+                balance += transaction.Amount;
+            }
+            // Skriv ut balansen efter loopen
+            Console.WriteLine($"Din totala balans är {balance}");
         }
         public void DeleteTrasaction()
         { 
