@@ -4,11 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Budgetmangerrr mybudgetmanger = new Budgetmangerrr(); //skapa objekt från klassen 
+            Budgetmangerrr mybudgetmanger = new Budgetmangerrr(); //skapa objekt från klassen budgetmangerrr
             bool altenativ = true;
             while (altenativ)
             {
-                Console.Clear(); // rensar konsolen varje gång menyn visas
+                Console.Clear(); // rensar konsolen varje gång menyn visas 
                 // meny som anvädaren kan välja
                 Console.WriteLine("Välkommen till meny");
                 Console.WriteLine("Välj ett altenativ nedan");
